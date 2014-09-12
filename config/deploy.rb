@@ -43,7 +43,7 @@ namespace :unicorn do
   end
 end
 
-after "deploy:restart", "unicorn:restart"
+#after "deploy:restart", "unicorn:restart"
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
