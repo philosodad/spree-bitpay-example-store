@@ -22,7 +22,7 @@ default_environment["RAILS_ENV"] = 'production'
 namespace :unicorn do
   desc "Zero-downtime restart of Unicorn"
   task :restart, except: { no_release: true } do
-    run "kill -s USR2 `cat /tmp/unicorn.[application's name].pid`"
+    run "kill -s USR2 `cat /tmp/unicorn.BitpayExampleStore.pid`"
   end
 
   desc "Start unicorn"
