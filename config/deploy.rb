@@ -14,7 +14,7 @@ role :db,  "50.116.35.154", :primary => true # This is where Rails migrations wi
 
 set :user, "carrot"
 set :deploy_to, "/srv/www/#{application}"
-set :user_sudo, false
+set :use_sudo, false
 
 default_run_options[:shell] = '/bin/bash --login'
 default_environment["RAILS_ENV"] = 'production'
