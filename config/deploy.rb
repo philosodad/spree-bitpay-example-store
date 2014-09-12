@@ -28,9 +28,13 @@ after "bundle:install", "symlink_database_yml"
 
 namespace :unicorn do
   desc "Zero-downtime restart of Unicorn"
-  task :restart, except: { no_release: true } do
-    run "kill -s USR2 `cat /tmp/unicorn.BitpayExampleStore.pid`"
-  end
+#  task :restart, except: { no_release: true } do
+#    if File.exist?('/tmp/unicorn.BitpayExampleStore.pid') then
+#      run "kill -s USR2 `cat /tmp/unicorn.BitpayExampleStore.pid`" 
+#    else
+#      "unicorn:start"
+#    end
+#  end
 
   desc "Start unicorn"
   task :start, except: { no_release: true } do
@@ -39,11 +43,11 @@ namespace :unicorn do
 
   desc "Stop unicorn"
   task :stop, except: { no_release: true } do
-    run "kill -s QUIT `cat /tmp/unicorn.BitpayExampleStore.pid`"
+    run "kill -s QUIT `cat /tmp/unicorn.BitpayExampleStore.pid`" if File.exist?('/tmp/unicorn.BitpayExampleStore.pid')
   end
 end
 
-#after "deploy:restart", "unicorn:restart"
+after "deploy:restart", "unicorn:stop", "unicorn:start"
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
 
