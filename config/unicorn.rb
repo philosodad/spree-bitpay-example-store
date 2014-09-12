@@ -24,7 +24,7 @@ if env == "production"
   working_directory "/srv/www/BitpayExampleStore/current"
 
   # feel free to point this anywhere accessible on the filesystem user 'spree'
-  shared_path = "srv/www/BitpayExampleStore/shared"
+  shared_path = "/srv/www/BitpayExampleStore/shared"
 
   stderr_path "#{shared_path}/log/unicorn.stderr.log"
   stdout_path "#{shared_path}/log/unicorn.stdout.log"
