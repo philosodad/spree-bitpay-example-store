@@ -50,4 +50,5 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 
 group :production do
   gem 'pg'
+  gem 'unicorn'
 end
