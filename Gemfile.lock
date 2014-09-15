@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/philosodad/spree-bitpay.git
-  revision: c2f586a3c1c3e999a653ac734ac773fe2c426e1d
-  branch: bug-fix-checkoutprocess
+  revision: 9d2ffd2ac658a0b99e4a271ce84a6f3692c37b21
+  branch: master
   specs:
     spree_bitpay (0.1.0)
       bitpay-client (>= 0.1.3)
