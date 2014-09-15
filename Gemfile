@@ -47,7 +47,7 @@ end
 gem 'spree', '2.2.2'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-2-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-2-stable'
-gem 'spree_bitpay', :git => 'https://github.com/philosodad/spree-bitpay.git', :branch => 'bug-fix-checkoutprocess'
+gem 'spree_bitpay', :git => 'https://github.com/philosodad/spree-bitpay.git', :branch => 'master'
 
 group :production do
   gem 'pg'
