@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912042583) do
+ActiveRecord::Schema.define(version: 20140915200748) do
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -68,6 +68,16 @@ ActiveRecord::Schema.define(version: 20140912042583) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_bitpay_invoices", force: true do |t|
+    t.string   "invoice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "payment_method_id"
+    t.integer  "user_id"
+  end
+
+  add_index "spree_bitpay_invoices", ["payment_method_id"], name: "index_spree_bitpay_invoices_on_payment_method_id"
 
   create_table "spree_calculators", force: true do |t|
     t.string   "type"
@@ -292,6 +302,7 @@ ActiveRecord::Schema.define(version: 20140912042583) do
     t.decimal  "uncaptured_amount",    precision: 10, scale: 2, default: 0.0
   end
 
+  add_index "spree_payments", ["identifier"], name: "index_spree_payments_on_identifier"
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id"
   add_index "spree_payments", ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
 

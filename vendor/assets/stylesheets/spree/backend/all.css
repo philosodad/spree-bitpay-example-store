@@ -8,5 +8,5 @@
 
  *= require_self
  *= require_tree .
- *= require spree/frontend/spree_bitpay
+ *= require spree/backend/spree_bitpay
 */
