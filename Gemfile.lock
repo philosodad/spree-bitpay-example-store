@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/philosodad/spree-bitpay.git
-  revision: 1b136e17423ef791230a8b098fc6f08b7de7b386
+  revision: 4717ff388f58dd8c691ed47838e2b771337a5282
   branch: master
   specs:
     spree_bitpay (0.1.1)
