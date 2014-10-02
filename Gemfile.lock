@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/bitpay/spree-bitpay.git
-  revision: 99a24d438df8615f029d06bfa59d414c94bee63c
+  remote: https://github.com/philosodad/spree-bitpay.git
+  revision: 78fb82c5101d9d5eeab7c9ed0b593af8a88d10b0
   specs:
     spree_bitpay (0.1.1)
       bitpay-client (~> 0.1.3)
