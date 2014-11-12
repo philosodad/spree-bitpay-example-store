@@ -7,13 +7,13 @@ set :repository,  "git@github.com:philosodad/spree-bitpay-example-store.git"
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-server = "50.116.35.154"
-role :web, "50.116.35.154"                         # Your HTTP server, Apache/etc
-role :app, "50.116.35.154"                         # This may be the same as your `Web` server
-role :db,  "50.116.35.154", :primary => true # This is where Rails migrations will run
+server = "spree-commerce-qa.b-pay.net"
+role :web, server                         # Your HTTP server, Apache/etc
+role :app, server                         # This may be the same as your `Web` server
+role :db,  server, :primary => true # This is where Rails migrations will run
 
-set :user, "carrot"
-set :deploy_to, "/srv/www/#{application}"
+set :user, "spree"
+set :deploy_to, "/srv/www/html/#{application}"
 set :use_sudo, false
 
 default_run_options[:shell] = '/bin/bash --login'
