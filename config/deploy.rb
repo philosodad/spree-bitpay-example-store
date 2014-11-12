@@ -8,12 +8,13 @@ set :repository,  "git@github.com:philosodad/spree-bitpay-example-store.git"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 server = "spree-commerce-qa.b-pay.net"
+ssh_options[:port] = 7453
 role :web, server                         # Your HTTP server, Apache/etc
 role :app, server                         # This may be the same as your `Web` server
 role :db,  server, :primary => true # This is where Rails migrations will run
 
 set :user, "spree"
-set :deploy_to, "/srv/www/html/#{application}"
+set :deploy_to, "/var/www/html/#{application}"
 set :use_sudo, false
 
 default_run_options[:shell] = '/bin/bash --login'
