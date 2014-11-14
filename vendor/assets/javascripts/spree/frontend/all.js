@@ -10,5 +10,4 @@
 //= require spree/frontend
 
 //= require_tree .
-//= require spree/frontend/spree_bitpay
 //= require easyModal.js-master/jquery.easyModal
