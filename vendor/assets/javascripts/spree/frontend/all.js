@@ -10,4 +10,3 @@
 //= require spree/frontend
 
 //= require_tree .
-//= require easyModal.js-master/jquery.easyModal
